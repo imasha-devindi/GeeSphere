@@ -1,0 +1,76 @@
+# ============================================
+#  GeeSphere — .gitignore
+# ============================================
+
+# ── Dependencies ──────────────────────────────
+node_modules/
+client/node_modules/
+server/node_modules/
+.pnp
+.pnp.js
+
+# ── Environment / Secrets ─────────────────────
+.env
+.env.*
+*.env
+client/.env*
+server/.env*
+!server/.env.example
+
+# ── Build Outputs ─────────────────────────────
+dist/
+build/
+client/dist/
+client/build/
+server/dist/
+.vite/
+
+# ── Uploaded Media Files ─────────────────────
+# User-uploaded songs and covers are NOT committed to git.
+# They are generated at runtime.
+server/uploads/songs/*
+server/uploads/covers/*
+# Keep the folder structure
+!server/uploads/songs/.gitkeep
+!server/uploads/covers/.gitkeep
+
+# ── Binary Tools ─────────────────────────────
+# yt-dlp.exe is a large binary (17MB+). Download it separately.
+# See README.md for download instructions.
+server/bin/*
+!server/bin/.gitkeep
+
+# ── Logs ─────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── OS / Editor junk ─────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ── Temporary / Cache ─────────────────────────
+.cache/
+.temp/
+tmp/
+*.tmp
+
+# ── Test artifacts ───────────────────────────
+coverage/
+.nyc_output/
