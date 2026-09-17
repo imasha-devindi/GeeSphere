@@ -1,0 +1,14 @@
+{
+  "name": "geesphere-root",
+  "version": "1.0.0",
+  "description": "GeeSphere Sri Lankan Music Streaming Platform Root Workspace",
+  "scripts": {
+    "start": "concurrently \"npm --prefix server start\" \"npm --prefix client run dev\"",
+    "dev": "concurrently \"npm --prefix server start\" \"npm --prefix client run dev\"",
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
